@@ -34,9 +34,7 @@ echo i2c-dev >> /etc/modules
 RUN apt-get install python-smbus i2c-tools git
 
 RUN git clone https://github.com/adafruit/Adafruit_Python_BMP.git
-
 WORKDIR /home/pi/Adafruit_Python_BMP
-
 RUN python setup.py install 
 
 WORKDIR /home/pi
