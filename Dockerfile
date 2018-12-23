@@ -40,5 +40,8 @@ echo type = dht22 >> config.ini && \
 echo interval = 60 >> config.ini && \
 echo decimal_digits = 4 >> config.ini
 
+RUN echo i2c-bcm2708 >> /etc/modules && \
+echo i2c-dev >> /etc/modules
+
 ENTRYPOINT python mqtt-dht.py
 #docker run
