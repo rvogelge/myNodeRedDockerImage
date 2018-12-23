@@ -1,12 +1,16 @@
 FROM resin/rpi-raspbian:jessie
-
-RUN apt-get update && apt-get install build-essential python-dev python-openssl git -y WORKDIR /home/pi RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git RUN apt-get install -y python-setuptools WORKDIR /home/pi/Adafruit_Python_DHT CMD python setup.py install RUN python setup.py install
-
+RUN apt-get update && apt-get install build-essential python-dev python-openssl git -y 
+WORKDIR /home/pi 
+RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git 
+RUN apt-get install -y python-setuptools 
+WORKDIR /home/pi/Adafruit_Python_DHT 
+CMD python setup.py install 
+RUN python setup.py install 
 RUN apt-get install python-pip
-
-WORKDIR /home/pi/
-
-RUN git clone https://github.com/janwh/dht22-mqtt-daemon.git WORKDIR /home/pi/dht22-mqtt-daemon RUN pip install -r requirements.txt
+WORKDIR /home/pi
+RUN git clone https://github.com/janwh/dht22-mqtt-daemon.git 
+WORKDIR /home/pi/dht22-mqtt-daemon 
+RUN pip install -r requirements.txt
 
 #RUN pip install paho-mqtt
 
