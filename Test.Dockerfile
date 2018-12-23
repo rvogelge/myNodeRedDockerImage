@@ -1,6 +1,6 @@
 FROM resin/rpi-raspbian:jessie
 RUN apt-get update && apt-get install build-essential python-dev python-openssl git -y 
-
+RUN pwd
 WORKDIR /home/pi 
 RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git 
 RUN apt-get install -y python-setuptools 
