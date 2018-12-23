@@ -31,4 +31,6 @@ RUN echo i2c-bcm2708 >> /etc/modules && \
 echo i2c-dev >> /etc/modules
 RUN apt-get install python-smbus i2c-tools git
 
+Run git clone https://github.com/adafruit/Adafruit-BMP085-Library.git
+
 ENTRYPOINT python mqtt-dht.py
