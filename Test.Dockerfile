@@ -27,7 +27,7 @@ echo interval = 60 >> config.ini && \
 echo decimal_digits = 4 >> config.ini
 
 
-#WORKDIR /home/pi
+WORKDIR /home/pi
 #RUN git clone https://github.com/adafruit/Adafruit_Python_BMP.git
 #WORKDIR /home/pi/Adafruit_Python_BMP
 #RUN python setup.py install 
