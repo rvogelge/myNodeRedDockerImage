@@ -16,6 +16,9 @@ RUN python setup.py install
 
 RUN apt-get install -y python-pip
 
+RUN echo i2c-bcm2708 >> /etc/modules && \
+echo i2c-dev >> /etc/modules
+
 WORKDIR /home/pi/
 
 RUN git clone https://github.com/janwh/dht22-mqtt-daemon.git
@@ -42,8 +45,7 @@ echo type = dht22 >> config.ini && \
 echo interval = 60 >> config.ini && \
 echo decimal_digits = 4 >> config.ini
 
-RUN echo i2c-bcm2708 >> /etc/modules && \
-echo i2c-dev >> /etc/modules
+
 
 ENTRYPOINT python mqtt-dht.py
 #docker run
