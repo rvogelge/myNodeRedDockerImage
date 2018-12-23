@@ -27,10 +27,12 @@ echo type = dht22 >> config.ini && \
 echo interval = 60 >> config.ini && \ 
 echo decimal_digits = 4 >> config.ini
 
+WORKDIR /home/pi
+
 RUN echo i2c-bcm2708 >> /etc/modules && \
 echo i2c-dev >> /etc/modules
 RUN apt-get install python-smbus i2c-tools git
 
-Run git clone https://github.com/adafruit/Adafruit-BMP085-Library.git
+Run git clone https://github.com/adafruit/Adafruit_Python_BMP.git
 
 ENTRYPOINT python mqtt-dht.py
