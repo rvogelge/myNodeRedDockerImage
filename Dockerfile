@@ -29,7 +29,7 @@ RUN pip install -r requirements.txt
 
 RUN pip install paho-mqtt
 
-RUN apt-get install -y python-rpi.gpio
+#RUN apt-get install -y python-rpi.gpio
 
 RUN echo [mqtt] > config.ini && \
 echo >> config.ini && \
