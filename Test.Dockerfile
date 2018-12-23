@@ -7,7 +7,7 @@ WORKDIR /home/pi/Adafruit_Python_DHT
 CMD python setup.py install 
 RUN python setup.py install 
 RUN apt-get install python-pip
-WORKDIR /home/pi
+WORKDIR /home/pi/
 RUN git clone https://github.com/janwh/dht22-mqtt-daemon.git 
 WORKDIR /home/pi/dht22-mqtt-daemon 
 RUN pip install -r requirements.txt
