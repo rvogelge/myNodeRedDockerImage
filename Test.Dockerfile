@@ -26,11 +26,10 @@ echo type = dht22 >> config.ini && \
 echo interval = 60 >> config.ini && \ 
 echo decimal_digits = 4 >> config.ini
 
-RUN pwd
 
-WORKDIR /home/pi
-RUN git clone https://github.com/adafruit/Adafruit_Python_BMP.git
-WORKDIR /home/pi/Adafruit_Python_BMP
+#WORKDIR /home/pi
+#RUN git clone https://github.com/adafruit/Adafruit_Python_BMP.git
+#WORKDIR /home/pi/Adafruit_Python_BMP
 #RUN python setup.py install 
 
 RUN echo i2c-bcm2708 >> /etc/modules && \
