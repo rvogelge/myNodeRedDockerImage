@@ -31,7 +31,7 @@ RUN pwd
 WORKDIR /home/pi
 RUN git clone https://github.com/adafruit/Adafruit_Python_BMP.git
 WORKDIR /home/pi/Adafruit_Python_BMP
-RUN python setup.py install 
+#RUN python setup.py install 
 
 RUN echo i2c-bcm2708 >> /etc/modules && \
 echo i2c-dev >> /etc/modules
