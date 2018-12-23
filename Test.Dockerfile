@@ -39,4 +39,6 @@ WORKDIR /home/pi/Adafruit_Python_BMP
 CMD python setup.py install 
 RUN python setup.py install 
 
+WORKDIR /home/pi
+
 ENTRYPOINT python mqtt-dht.py
