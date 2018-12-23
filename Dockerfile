@@ -25,7 +25,9 @@ WORKDIR /home/pi/dht22-mqtt-daemon
 RUN pip install -r requirements.txt
 
 RUN pip install paho-mqtt
-RUN apt-get install python-rpi.gpio
+
+RUN apt-get install -y python-rpi.gpio
+
 RUN echo [mqtt] > config.ini && \
 echo >> config.ini && \
 echo hostname = 192.168.178.74 >> config.ini && \
