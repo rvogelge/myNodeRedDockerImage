@@ -27,7 +27,7 @@ WORKDIR /home/pi/dht22-mqtt-daemon
 
 RUN pip install -r requirements.txt
 
-RUN pip install paho-mqtt
+#RUN pip install paho-mqtt
 
 #RUN apt-get install -y python-rpi.gpio
 
