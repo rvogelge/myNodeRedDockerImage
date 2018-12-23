@@ -14,7 +14,7 @@ CMD python setup.py install
 
 RUN python setup.py install
 
-RUN apt-get install python-pip
+RUN apt-get install -y python-pip
 
 WORKDIR /home/pi/
 
