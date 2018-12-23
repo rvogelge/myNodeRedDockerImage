@@ -31,10 +31,10 @@ echo type = dht22 >> config.ini && \
 echo interval = 60 >> config.ini && \ 
 echo decimal_digits = 4 >> config.ini
 
+WORKDIR /home/pi
+
 RUN echo i2c-bcm2708 >> /etc/modules && \
 echo i2c-dev >> /etc/modules
 RUN apt-get install python-smbus i2c-tools git
-
-WORKDIR /home/pi
 
 ENTRYPOINT python mqtt-dht.py
