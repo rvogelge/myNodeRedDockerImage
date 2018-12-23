@@ -7,10 +7,13 @@ WORKDIR /home/pi/Adafruit_Python_DHT
 CMD python setup.py install 
 RUN python setup.py install 
 RUN apt-get install python-pip
-WORKDIR /home/pi/
+WORKDIR /home/pi
 RUN git clone https://github.com/janwh/dht22-mqtt-daemon.git 
 WORKDIR /home/pi/dht22-mqtt-daemon 
 RUN pip install -r requirements.txt
+
+RUN echo i2c-bcm2708 >> /etc/modules && \
+echo i2c-dev >> /etc/modules
 
 #RUN pip install paho-mqtt
 
