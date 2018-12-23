@@ -16,10 +16,10 @@ RUN pip install -r requirements.txt
 
 RUN echo [mqtt] > config.ini && \ 
 echo >> config.ini && \ 
-echo hostname = 10.0.1.37 >> config.ini && \ 
+echo hostname = 192.168.178.74 >> config.ini && \ 
 echo port = 1883 >> config.ini && \ 
 echo timeout = 60 >> config.ini && \ 
-echo topic = home/livingroom >> config.ini && \ 
+echo topic = home/office/temp >> config.ini && \ 
 echo >> config.ini && \ 
 echo [sensor] >> config.ini && \ 
 echo >> config.ini && \ 
