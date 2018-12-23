@@ -41,3 +41,4 @@ echo interval = 60 >> config.ini && \
 echo decimal_digits = 4 >> config.ini
 
 ENTRYPOINT python mqtt-dht.py
+#docker run
