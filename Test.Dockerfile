@@ -1,7 +1,7 @@
 FROM nodered/node-red-docker:rpi
 #FROM resin/rpi-raspbian:jessie
 USER root
-RUN apt-get update && apt-get install build-essential python-dev python-openssl git -y 
+RUN sudo apt-get update && apt-get install build-essential python-dev python-openssl git -y 
 
 RUN pwd
 
