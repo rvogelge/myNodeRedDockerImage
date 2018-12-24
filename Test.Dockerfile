@@ -1,9 +1,9 @@
-#FROM nodered/node-red-docker:rpi
+FROM nodered/node-red-docker:rpi
 #FROM resin/rpi-raspbian:jessie
-FROM audumla/audiot-rpi-nodered
+#FROM audumla/audiot-rpi-nodered
 USER root
 RUN sudo apt-get update && apt-get install build-essential python-dev python-openssl git -y 
-
+RUN apt-get install python-rpi.gpio
 RUN pwd
 
 WORKDIR /home/pi 
